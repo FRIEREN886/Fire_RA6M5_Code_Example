@@ -18,7 +18,7 @@ transfer_info_t g_transfer_dmac0_info =
 const dmac_extended_cfg_t g_transfer_dmac0_extend =
 {
     .offset              = 1,
-    .src_buffer_size     = 1,
+    .src_buffer_size     = 32,
 #if defined(VECTOR_NUMBER_DMAC0_INT)
     .irq                 = VECTOR_NUMBER_DMAC0_INT,
 #else

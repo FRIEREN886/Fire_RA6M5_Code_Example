@@ -36,9 +36,10 @@
   ra_cfg\fsp_cfg\bsp\bsp_pin_cfg.h ra\fsp\inc\instances\r_dmac.h \
   ra\fsp\inc\api\r_transfer_api.h ra\fsp\inc\instances\r_sci_uart.h \
   ra\fsp\inc\api\r_uart_api.h ra_cfg\fsp_cfg\r_sci_uart_cfg.h \
-  G:\Renesas_FSP_data\FSP_UART_Qu_DMAC\FSP_LED.h \
-  G:\Renesas_FSP_data\FSP_UART_Qu_DMAC\FSP_Button.h \
-  G:\Renesas_FSP_data\FSP_UART_Qu_DMAC\FSP_ICU_key.h \
-  G:\Renesas_FSP_data\FSP_UART_Qu_DMAC\FSP_Systick.h \
-  G:\Renesas_FSP_data\FSP_UART_Qu_DMAC\FSP_UART.h \
-  G:\Renesas_FSP_data\FSP_UART_Qu_DMAC\circular_queue.h
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\FSP_LED.h \
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\FSP_Button.h \
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\FSP_ICU_key.h \
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\FSP_Systick.h \
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\FSP_UART.h \
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\circular_queue.h \
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\FSP_DMAC.h

@@ -1,5 +1,5 @@
 ./objects/r_dmac.o: \
-  G:\Renesas_FSP_data\FSP_UART_Qu_DMAC\ra\fsp\src\r_dmac\r_dmac.c \
+  G:\Renesas_FSP_data\Fire_RA6M5_Code_Example\FSP_UART_Qu_DMAC\ra\fsp\src\r_dmac\r_dmac.c \
   ra\fsp\inc\instances\r_dmac.h ra\fsp\inc\api\bsp_api.h \
   ra\fsp\inc\api\fsp_common_api.h ra\fsp\inc\fsp_version.h \
   ra_cfg\fsp_cfg\bsp\bsp_cfg.h ra_gen\bsp_clock_cfg.h \
