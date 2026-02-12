@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“111/src/FSP_KEY_IRQ”重命名为“FSP_KEY_IRQ.h”" description="重命名资源“FSP_KEY_IRQ”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/FSP_KEY_IRQ" name="FSP_KEY_IRQ.h" stamp="1769754448121" updateReferences="true"/>
+</session>

@@ -1,0 +1,13 @@
+/*
+ * FSP_KEY_IRQ.h
+ *
+ *  Created on: 2026年1月30日
+ *      Author: frieren
+ */
+
+#ifndef FSP_KEY_IRQ_H_
+#define FSP_KEY_IRQ_H_
+#include "hal_data.h"
+
+
+#endif /* FSP_KEY_IRQ_H_ */

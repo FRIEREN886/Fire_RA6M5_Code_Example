@@ -1,0 +1,16 @@
+/*
+ * FSP_KEY_IRQ.c
+ *
+ *  Created on: 2026年1月30日
+ *      Author: frieren
+ */
+#include "FSP_KEY_IRQ.h"
+
+void Key_IRQ_Init()
+{
+    fsp_err_t err = FSP_SUCCESS;
+    err = R_ICU_ExternalIrqOpen(&irq9_ctrl, &irq9_cfg);
+    err = R_ICU_ExternalIrqOpen(&irq10_ctrl, &irq10_cfg);
+    err = R_ICU_ExternalIrqEnable(&irq9_ctrl);
+    err = R_ICU_ExternalIrqEnable(&irq10_ctrl);
+}

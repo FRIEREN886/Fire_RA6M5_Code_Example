@@ -1,0 +1,18 @@
+15:00:45 **** Incremental Build of configuration Debug for project 111 ****
+make -r -j32 all 
+Building file: ../src/FSP_KEY_IRQ.c
+../src/FSP_KEY_IRQ.c:9:6: warning: no previous declaration for 'Key_IRQ_Init' [-Wmissing-declarations]
+    9 | void Key_IRQ_Init()
+      |      ^~~~~~~~~~~~
+../src/FSP_KEY_IRQ.c: In function 'Key_IRQ_Init':
+../src/FSP_KEY_IRQ.c:11:15: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   11 |     fsp_err_t err = FSP_SUCCESS;
+      |               ^~~
+Building target: 111.elf
+arm-none-eabi-objcopy -O srec "111.elf"  "111.srec"
+arm-none-eabi-size --format=berkeley "111.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2996	      8	   1560	   4564	   11d4	111.elf
+
+15:00:45 Build Finished. 0 errors, 2 warnings. (took 289ms)
+

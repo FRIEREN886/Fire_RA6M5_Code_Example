@@ -1,0 +1,11 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/name=\u672C\u5730
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/os=win32
+com.renesas.cdt.launch.dsf.launching.gdbLocalLaunchDescriptorType\:FSP_ICU\ Debug_Flat/activeLaunchMode=debug
+com.renesas.cdt.launch.dsf.launching.gdbLocalLaunchDescriptorType\:FSP_ICU\ Debug_Flat/activeLaunchTarget=null\:---
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:111 Debug
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:111\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:111\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:\u672C\u5730
+org.eclipse.launchbar.core.descriptorType.default\:FSP_ICU\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:FSP_ICU\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:\u672C\u5730

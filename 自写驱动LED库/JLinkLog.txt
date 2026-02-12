@@ -1,0 +1,47 @@
+T76A0 002:188.530   SEGGER J-Link V8.16 Log File
+T76A0 002:188.742   DLL Compiled: Feb 26 2025 12:07:26
+T76A0 002:188.761   Logging started @ 2026-01-13 07:02
+T76A0 002:188.779   Process: D:\UVsion5.32\Core\UV4\UV4.exe
+T76A0 002:188.814 - 2188.796ms 
+T76A0 002:188.839 JLINK_SetWarnOutHandler(...)
+T76A0 002:188.857 - 0.021ms 
+T76A0 002:188.880 JLINK_OpenEx(...)
+T76A0 002:191.021   
+  ***** Error: 
+T76A0 002:191.055   Cannot connect to J-Link.
+T76A0 002:191.152 - 2.272ms returns "Cannot connect to J-Link."
+T76A0 002:191.314 
+  ***** Warning: 
+T76A0 002:191.350 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T76A0 002:191.364 JLINK_GetHardwareVersion()
+T76A0 002:192.936   
+  ***** Error: 
+T76A0 002:194.416   Cannot connect to J-Link.
+T76A0 002:194.465 - 3.100ms 
+T76A0 004:644.347 JLINK_IsOpen()
+T76A0 004:644.378 - 0.043ms returns 0x00
+T76A0 004:644.386 JLINK_EMU_SelectByUSBSN(SerialNo = 0)
+T76A0 004:645.486 - 1.099ms returns 0xFFFFFFFF
+T76A0 004:645.499 JLINK_EnableLog(...)
+T76A0 004:645.505 - 0.005ms 
+T76A0 004:645.511 JLINK_SetLogFile(...)
+T76A0 004:645.515 - 0.004ms 
+T76A0 004:645.521 JLINK_SetWarnOutHandler(...)
+T76A0 004:645.525 - 0.004ms 
+T76A0 004:645.533 JLINK_OpenEx(...)
+T76A0 004:647.789   
+  ***** Error: 
+T76A0 004:647.810   Cannot connect to J-Link.
+T76A0 004:647.896 - 2.361ms returns "Cannot connect to J-Link."
+T76A0 004:648.083 
+  ***** Warning: 
+T76A0 004:648.090 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T76A0 004:648.097 JLINK_GetHardwareVersion()
+T76A0 004:650.053   
+  ***** Error: 
+T76A0 004:650.065   Cannot connect to J-Link.
+T76A0 004:650.125 - 2.027ms 
+T76A0 006:113.165 JLINK_Close()
+T76A0 006:113.348 - 0.182ms
+T76A0 006:113.364   
+T76A0 006:113.366   Closed

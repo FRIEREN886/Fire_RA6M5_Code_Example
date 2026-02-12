@@ -1,0 +1,757 @@
+Component: Arm Compiler for Embedded 6.24 Tool: armlink [5f371500]
+
+==============================================================================
+
+Section Cross References
+
+    fsp_led.o(.text.FSP_LED_Init) refers to common_data.o(.rodata.g_ioport) for g_ioport
+    fsp_led.o(.text.FSP_LED_Init) refers to common_data.o(.bss.g_ioport_ctrl) for g_ioport_ctrl
+    fsp_led.o(.text.FSP_LED_Init) refers to r_ioport.o(.text.R_IOPORT_Open) for R_IOPORT_Open
+    fsp_led.o(.ARM.exidx.text.FSP_LED_Init) refers to fsp_led.o(.text.FSP_LED_Init) for [Anonymous Symbol]
+    fsp_button.o(.text.FSP_Button_Init) refers to common_data.o(.rodata.g_ioport) for g_ioport
+    fsp_button.o(.text.FSP_Button_Init) refers to common_data.o(.bss.g_ioport_ctrl) for g_ioport_ctrl
+    fsp_button.o(.text.FSP_Button_Init) refers to r_ioport.o(.text.R_IOPORT_Open) for R_IOPORT_Open
+    fsp_button.o(.ARM.exidx.text.FSP_Button_Init) refers to fsp_button.o(.text.FSP_Button_Init) for [Anonymous Symbol]
+    fsp_button.o(.text.FSP_Scan_Key) refers to common_data.o(.bss.g_ioport_ctrl) for g_ioport_ctrl
+    fsp_button.o(.text.FSP_Scan_Key) refers to r_ioport.o(.text.R_IOPORT_PinRead) for R_IOPORT_PinRead
+    fsp_button.o(.ARM.exidx.text.FSP_Scan_Key) refers to fsp_button.o(.text.FSP_Scan_Key) for [Anonymous Symbol]
+    fsp_icu_key.o(.text.Key_IRQ_Init) refers to common_data.o(.bss.irq9_ctrl) for irq9_ctrl
+    fsp_icu_key.o(.text.Key_IRQ_Init) refers to common_data.o(.rodata.irq9_cfg) for irq9_cfg
+    fsp_icu_key.o(.text.Key_IRQ_Init) refers to r_icu.o(.text.R_ICU_ExternalIrqOpen) for R_ICU_ExternalIrqOpen
+    fsp_icu_key.o(.text.Key_IRQ_Init) refers to common_data.o(.bss.irq10_ctrl) for irq10_ctrl
+    fsp_icu_key.o(.text.Key_IRQ_Init) refers to common_data.o(.rodata.irq10_cfg) for irq10_cfg
+    fsp_icu_key.o(.text.Key_IRQ_Init) refers to r_icu.o(.text.R_ICU_ExternalIrqEnable) for R_ICU_ExternalIrqEnable
+    fsp_icu_key.o(.text.Key_IRQ_Init) refers to bsp_common.o(.text.__aeabi_assert) for __aeabi_assert
+    fsp_icu_key.o(.ARM.exidx.text.Key_IRQ_Init) refers to fsp_icu_key.o(.text.Key_IRQ_Init) for [Anonymous Symbol]
+    fsp_icu_key.o(.text.key_external_irq) refers to fsp_icu_key.o(.bss.key2_sw3_press) for key2_sw3_press
+    fsp_icu_key.o(.text.key_external_irq) refers to fsp_icu_key.o(.bss.key1_sw2_press) for key1_sw2_press
+    fsp_icu_key.o(.ARM.exidx.text.key_external_irq) refers to fsp_icu_key.o(.text.key_external_irq) for [Anonymous Symbol]
+    fsp_systick.o(.text.FSP_Systick_Init) refers to system.o(.bss.SystemCoreClock) for SystemCoreClock
+    fsp_systick.o(.text.FSP_Systick_Init) refers to fsp_systick.o(.bss.FSP_Systick_period) for FSP_Systick_period
+    fsp_systick.o(.ARM.exidx.text.FSP_Systick_Init) refers to fsp_systick.o(.text.FSP_Systick_Init) for [Anonymous Symbol]
+    fsp_systick.o(.text.FSP_Delay_Systick) refers to fsp_systick.o(.bss.FSP_Systick_period) for FSP_Systick_period
+    fsp_systick.o(.text.FSP_Delay_Systick) refers to fsp_systick.o(.bss.FSP_Delay_Nums) for FSP_Delay_Nums
+    fsp_systick.o(.ARM.exidx.text.FSP_Delay_Systick) refers to fsp_systick.o(.text.FSP_Delay_Systick) for [Anonymous Symbol]
+    fsp_systick.o(.text.SysTick_Handler) refers to fsp_systick.o(.bss.FSP_Delay_Nums) for FSP_Delay_Nums
+    fsp_systick.o(.ARM.exidx.text.SysTick_Handler) refers to fsp_systick.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    fsp_uart.o(.text.FSP_UART_Init) refers to hal_data.o(.bss.UART_4_ctrl) for UART_4_ctrl
+    fsp_uart.o(.text.FSP_UART_Init) refers to hal_data.o(.rodata.UART_4_cfg) for UART_4_cfg
+    fsp_uart.o(.text.FSP_UART_Init) refers to r_sci_uart.o(.text.R_SCI_UART_Open) for R_SCI_UART_Open
+    fsp_uart.o(.text.FSP_UART_Init) refers to bsp_common.o(.text.__aeabi_assert) for __aeabi_assert
+    fsp_uart.o(.ARM.exidx.text.FSP_UART_Init) refers to fsp_uart.o(.text.FSP_UART_Init) for [Anonymous Symbol]
+    fsp_uart.o(.text.UART4_Int_Callback) refers to circular_queue.o(.bss.Circular_queue) for Circular_queue
+    fsp_uart.o(.text.UART4_Int_Callback) refers to circular_queue.o(.text.Queue_Wirte) for Queue_Wirte
+    fsp_uart.o(.text.UART4_Int_Callback) refers to fsp_uart.o(.bss.Uart_Send_Seccuse_Ack) for Uart_Send_Seccuse_Ack
+    fsp_uart.o(.ARM.exidx.text.UART4_Int_Callback) refers to fsp_uart.o(.text.UART4_Int_Callback) for [Anonymous Symbol]
+    fsp_uart.o(.text.fputc) refers to hal_data.o(.bss.UART_4_ctrl) for UART_4_ctrl
+    fsp_uart.o(.text.fputc) refers to r_sci_uart.o(.text.R_SCI_UART_Write) for R_SCI_UART_Write
+    fsp_uart.o(.text.fputc) refers to fsp_uart.o(.bss.Uart_Send_Seccuse_Ack) for Uart_Send_Seccuse_Ack
+    fsp_uart.o(.ARM.exidx.text.fputc) refers to fsp_uart.o(.text.fputc) for [Anonymous Symbol]
+    circular_queue.o(.text.Queue_Init) refers to memseta.o(.text) for __aeabi_memclr
+    circular_queue.o(.ARM.exidx.text.Queue_Init) refers to circular_queue.o(.text.Queue_Init) for [Anonymous Symbol]
+    circular_queue.o(.ARM.exidx.text.Queue_isEmpty) refers to circular_queue.o(.text.Queue_isEmpty) for [Anonymous Symbol]
+    circular_queue.o(.ARM.exidx.text.Queue_isFull) refers to circular_queue.o(.text.Queue_isFull) for [Anonymous Symbol]
+    circular_queue.o(.ARM.exidx.text.Queue_HadUse) refers to circular_queue.o(.text.Queue_HadUse) for [Anonymous Symbol]
+    circular_queue.o(.ARM.exidx.text.Queue_NoUse) refers to circular_queue.o(.text.Queue_NoUse) for [Anonymous Symbol]
+    circular_queue.o(.ARM.exidx.text.Queue_Wirte) refers to circular_queue.o(.text.Queue_Wirte) for [Anonymous Symbol]
+    circular_queue.o(.ARM.exidx.text.Queue_Read) refers to circular_queue.o(.text.Queue_Read) for [Anonymous Symbol]
+    hal_entry.o(.text.hal_entry) refers to fsp_uart.o(.text.FSP_UART_Init) for FSP_UART_Init
+    hal_entry.o(.text.hal_entry) refers to fsp_button.o(.text.FSP_Button_Init) for FSP_Button_Init
+    hal_entry.o(.text.hal_entry) refers to circular_queue.o(.bss.Circular_queue) for Circular_queue
+    hal_entry.o(.text.hal_entry) refers to circular_queue.o(.text.Queue_Init) for Queue_Init
+    hal_entry.o(.text.hal_entry) refers to hal_entry.o(.bss.Read_Length) for Read_Length
+    hal_entry.o(.text.hal_entry) refers to hal_entry.o(.bss.Read_Buffer) for Read_Buffer
+    hal_entry.o(.text.hal_entry) refers to fsp_button.o(.text.FSP_Scan_Key) for FSP_Scan_Key
+    hal_entry.o(.text.hal_entry) refers to puts.o(i.puts) for puts
+    hal_entry.o(.text.hal_entry) refers to circular_queue.o(.text.Queue_isEmpty) for Queue_isEmpty
+    hal_entry.o(.text.hal_entry) refers to circular_queue.o(.text.Queue_HadUse) for Queue_HadUse
+    hal_entry.o(.text.hal_entry) refers to printf1.o(i.__0printf$1) for __2printf
+    hal_entry.o(.text.hal_entry) refers to memseta.o(.text) for __aeabi_memclr4
+    hal_entry.o(.text.hal_entry) refers to circular_queue.o(.text.Queue_Read) for Queue_Read
+    hal_entry.o(.text.hal_entry) refers to bsp_delay.o(.text.R_BSP_SoftwareDelay) for R_BSP_SoftwareDelay
+    hal_entry.o(.ARM.exidx.text.hal_entry) refers to hal_entry.o(.text.hal_entry) for [Anonymous Symbol]
+    hal_entry.o(.text.R_BSP_WarmStart) refers to common_data.o(.rodata.g_ioport) for g_ioport
+    hal_entry.o(.text.R_BSP_WarmStart) refers to common_data.o(.bss.g_ioport_ctrl) for g_ioport_ctrl
+    hal_entry.o(.text.R_BSP_WarmStart) refers to r_ioport.o(.text.R_IOPORT_Open) for R_IOPORT_Open
+    hal_entry.o(.ARM.exidx.text.R_BSP_WarmStart) refers to hal_entry.o(.text.R_BSP_WarmStart) for [Anonymous Symbol]
+    startup.o(.text.Reset_Handler) refers to system.o(.text.SystemInit) for SystemInit
+    startup.o(.text.Reset_Handler) refers to main.o(.text.main) for main
+    startup.o(.ARM.exidx.text.Reset_Handler) refers to startup.o(.text.Reset_Handler) for [Anonymous Symbol]
+    startup.o(.ARM.exidx.text.Default_Handler) refers to startup.o(.text.Default_Handler) for [Anonymous Symbol]
+    startup.o(.fixed_vectors) refers to startup.o(.bss.stack) for [Anonymous Symbol]
+    startup.o(.fixed_vectors) refers to startup.o(.text.Reset_Handler) for Reset_Handler
+    startup.o(.fixed_vectors) refers to bsp_group_irq.o(.text.NMI_Handler) for NMI_Handler
+    startup.o(.fixed_vectors) refers to startup.o(.text.Default_Handler) for HardFault_Handler
+    startup.o(.fixed_vectors) refers to fsp_systick.o(.text.SysTick_Handler) for SysTick_Handler
+    system.o(.text.SystemInit) refers to startup.o(.fixed_vectors) for __Vectors
+    system.o(.text.SystemInit) refers to hal_entry.o(.text.R_BSP_WarmStart) for R_BSP_WarmStart
+    system.o(.text.SystemInit) refers to bsp_clocks.o(.text.bsp_clock_init) for bsp_clock_init
+    system.o(.text.SystemInit) refers to memseta.o(.text) for __aeabi_memclr4
+    system.o(.text.SystemInit) refers to memcpya.o(.text) for __aeabi_memcpy4
+    system.o(.text.SystemInit) refers to bsp_clocks.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    system.o(.text.SystemInit) refers to bsp_clocks.o(.text.R_BSP_Init_RTC) for R_BSP_Init_RTC
+    system.o(.text.SystemInit) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectDisable) for R_BSP_RegisterProtectDisable
+    system.o(.text.SystemInit) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectEnable) for R_BSP_RegisterProtectEnable
+    system.o(.text.SystemInit) refers to bsp_irq.o(.text.bsp_irq_cfg) for bsp_irq_cfg
+    system.o(.text.SystemInit) refers to bsp_common.o(.text.bsp_init_internal) for bsp_init
+    system.o(.ARM.exidx.text.SystemInit) refers to system.o(.text.SystemInit) for [Anonymous Symbol]
+    system.o(.ARM.exidx.text.R_BSP_WarmStart) refers to system.o(.text.R_BSP_WarmStart) for [Anonymous Symbol]
+    bsp_clocks.o(.ARM.exidx.text.bsp_prv_operating_mode_set) refers to bsp_clocks.o(.text.bsp_prv_operating_mode_set) for [Anonymous Symbol]
+    bsp_clocks.o(.text.bsp_prv_prepare_pll) refers to bsp_clocks.o(.bss.noinit) for g_clock_freq
+    bsp_clocks.o(.ARM.exidx.text.bsp_prv_prepare_pll) refers to bsp_clocks.o(.text.bsp_prv_prepare_pll) for [Anonymous Symbol]
+    bsp_clocks.o(.text.SystemCoreClockUpdate) refers to bsp_clocks.o(.bss.noinit) for g_clock_freq
+    bsp_clocks.o(.text.SystemCoreClockUpdate) refers to system.o(.bss.SystemCoreClock) for SystemCoreClock
+    bsp_clocks.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to bsp_clocks.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    bsp_clocks.o(.ARM.exidx.text.prv_clock_dividers_set) refers to bsp_clocks.o(.text.prv_clock_dividers_set) for [Anonymous Symbol]
+    bsp_clocks.o(.text.bsp_prv_clock_set) refers to bsp_clocks.o(.bss.noinit) for g_clock_freq
+    bsp_clocks.o(.text.bsp_prv_clock_set) refers to system.o(.bss.SystemCoreClock) for SystemCoreClock
+    bsp_clocks.o(.ARM.exidx.text.bsp_prv_clock_set) refers to bsp_clocks.o(.text.bsp_prv_clock_set) for [Anonymous Symbol]
+    bsp_clocks.o(.text.bsp_clock_init) refers to bsp_clocks.o(.bss.noinit) for g_clock_freq
+    bsp_clocks.o(.text.bsp_clock_init) refers to system.o(.bss.SystemCoreClock) for SystemCoreClock
+    bsp_clocks.o(.text.bsp_clock_init) refers to bsp_delay.o(.text.R_BSP_SoftwareDelay) for R_BSP_SoftwareDelay
+    bsp_clocks.o(.ARM.exidx.text.bsp_clock_init) refers to bsp_clocks.o(.text.bsp_clock_init) for [Anonymous Symbol]
+    bsp_clocks.o(.text.R_BSP_SubClockStabilizeWait) refers to bsp_delay.o(.text.R_BSP_SoftwareDelay) for R_BSP_SoftwareDelay
+    bsp_clocks.o(.ARM.exidx.text.R_BSP_SubClockStabilizeWait) refers to bsp_clocks.o(.text.R_BSP_SubClockStabilizeWait) for [Anonymous Symbol]
+    bsp_clocks.o(.ARM.exidx.text.R_BSP_OctaclkUpdate) refers to bsp_clocks.o(.text.R_BSP_OctaclkUpdate) for [Anonymous Symbol]
+    bsp_clocks.o(.text.R_BSP_SourceClockHzGet) refers to bsp_clocks.o(.bss.noinit) for g_clock_freq
+    bsp_clocks.o(.ARM.exidx.text.R_BSP_SourceClockHzGet) refers to bsp_clocks.o(.text.R_BSP_SourceClockHzGet) for [Anonymous Symbol]
+    bsp_clocks.o(.text.R_BSP_Init_RTC) refers to bsp_delay.o(.text.R_BSP_SoftwareDelay) for R_BSP_SoftwareDelay
+    bsp_clocks.o(.text.R_BSP_Init_RTC) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectDisable) for R_BSP_RegisterProtectDisable
+    bsp_clocks.o(.text.R_BSP_Init_RTC) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectEnable) for R_BSP_RegisterProtectEnable
+    bsp_clocks.o(.ARM.exidx.text.R_BSP_Init_RTC) refers to bsp_clocks.o(.text.R_BSP_Init_RTC) for [Anonymous Symbol]
+    bsp_common.o(.ARM.exidx.text.bsp_init_internal) refers to bsp_common.o(.text.bsp_init_internal) for [Anonymous Symbol]
+    bsp_common.o(.ARM.exidx.text.R_FSP_VersionGet) refers to bsp_common.o(.text.R_FSP_VersionGet) for [Anonymous Symbol]
+    bsp_common.o(.ARM.exidx.text.__aeabi_assert) refers to bsp_common.o(.text.__aeabi_assert) for [Anonymous Symbol]
+    bsp_delay.o(.text.R_BSP_SoftwareDelay) refers to system.o(.bss.SystemCoreClock) for SystemCoreClock
+    bsp_delay.o(.text.R_BSP_SoftwareDelay) refers to bsp_delay.o(.text.bsp_prv_software_delay_loop) for bsp_prv_software_delay_loop
+    bsp_delay.o(.ARM.exidx.text.R_BSP_SoftwareDelay) refers to bsp_delay.o(.text.R_BSP_SoftwareDelay) for [Anonymous Symbol]
+    bsp_delay.o(.ARM.exidx.text.bsp_prv_software_delay_loop) refers to bsp_delay.o(.text.bsp_prv_software_delay_loop) for [Anonymous Symbol]
+    bsp_group_irq.o(.text.R_BSP_GroupIrqWrite) refers to bsp_group_irq.o(.bss.g_bsp_group_irq_sources) for g_bsp_group_irq_sources
+    bsp_group_irq.o(.ARM.exidx.text.R_BSP_GroupIrqWrite) refers to bsp_group_irq.o(.text.R_BSP_GroupIrqWrite) for [Anonymous Symbol]
+    bsp_group_irq.o(.text.NMI_Handler) refers to bsp_group_irq.o(.bss.g_bsp_group_irq_sources) for g_bsp_group_irq_sources
+    bsp_group_irq.o(.ARM.exidx.text.NMI_Handler) refers to bsp_group_irq.o(.text.NMI_Handler) for [Anonymous Symbol]
+    bsp_irq.o(.text.bsp_irq_cfg) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectDisable) for R_BSP_RegisterProtectDisable
+    bsp_irq.o(.text.bsp_irq_cfg) refers to vector_data.o(.rodata.g_interrupt_event_link_select) for g_interrupt_event_link_select
+    bsp_irq.o(.text.bsp_irq_cfg) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectEnable) for R_BSP_RegisterProtectEnable
+    bsp_irq.o(.ARM.exidx.text.bsp_irq_cfg) refers to bsp_irq.o(.text.bsp_irq_cfg) for [Anonymous Symbol]
+    bsp_register_protection.o(.text.R_BSP_RegisterProtectEnable) refers to bsp_register_protection.o(.bss.g_protect_counters) for g_protect_counters
+    bsp_register_protection.o(.text.R_BSP_RegisterProtectEnable) refers to bsp_register_protection.o(.rodata.cst8) for g_prcr_masks
+    bsp_register_protection.o(.ARM.exidx.text.R_BSP_RegisterProtectEnable) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectEnable) for [Anonymous Symbol]
+    bsp_register_protection.o(.text.R_BSP_RegisterProtectDisable) refers to bsp_register_protection.o(.bss.g_protect_counters) for g_protect_counters
+    bsp_register_protection.o(.text.R_BSP_RegisterProtectDisable) refers to bsp_register_protection.o(.rodata.cst8) for g_prcr_masks
+    bsp_register_protection.o(.ARM.exidx.text.R_BSP_RegisterProtectDisable) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectDisable) for [Anonymous Symbol]
+    r_icu.o(.text.R_ICU_ExternalIrqOpen) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqOpen) refers to r_icu.o(.text.R_ICU_ExternalIrqOpen) for [Anonymous Symbol]
+    r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqEnable) refers to r_icu.o(.text.R_ICU_ExternalIrqEnable) for [Anonymous Symbol]
+    r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqDisable) refers to r_icu.o(.text.R_ICU_ExternalIrqDisable) for [Anonymous Symbol]
+    r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqCallbackSet) refers to r_icu.o(.text.R_ICU_ExternalIrqCallbackSet) for [Anonymous Symbol]
+    r_icu.o(.text.R_ICU_ExternalIrqClose) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqClose) refers to r_icu.o(.text.R_ICU_ExternalIrqClose) for [Anonymous Symbol]
+    r_icu.o(.text.r_icu_isr) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_icu.o(.ARM.exidx.text.r_icu_isr) refers to r_icu.o(.text.r_icu_isr) for [Anonymous Symbol]
+    r_icu.o(.rodata.g_external_irq_on_icu) refers to r_icu.o(.text.R_ICU_ExternalIrqOpen) for R_ICU_ExternalIrqOpen
+    r_icu.o(.rodata.g_external_irq_on_icu) refers to r_icu.o(.text.R_ICU_ExternalIrqEnable) for R_ICU_ExternalIrqEnable
+    r_icu.o(.rodata.g_external_irq_on_icu) refers to r_icu.o(.text.R_ICU_ExternalIrqDisable) for R_ICU_ExternalIrqDisable
+    r_icu.o(.rodata.g_external_irq_on_icu) refers to r_icu.o(.text.R_ICU_ExternalIrqCallbackSet) for R_ICU_ExternalIrqCallbackSet
+    r_icu.o(.rodata.g_external_irq_on_icu) refers to r_icu.o(.text.R_ICU_ExternalIrqClose) for R_ICU_ExternalIrqClose
+    r_ioport.o(.text.R_IOPORT_Open) refers to r_ioport.o(.text.r_ioport_pins_config) for r_ioport_pins_config
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_Open) refers to r_ioport.o(.text.R_IOPORT_Open) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_Close) refers to r_ioport.o(.text.R_IOPORT_Close) for [Anonymous Symbol]
+    r_ioport.o(.text.R_IOPORT_PinsCfg) refers to r_ioport.o(.text.r_ioport_pins_config) for r_ioport_pins_config
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PinsCfg) refers to r_ioport.o(.text.R_IOPORT_PinsCfg) for [Anonymous Symbol]
+    r_ioport.o(.text.R_IOPORT_PinCfg) refers to r_ioport.o(.text.bsp_vbatt_init) for bsp_vbatt_init
+    r_ioport.o(.text.R_IOPORT_PinCfg) refers to bsp_io.o(.bss.g_protect_pfswe_counter) for g_protect_pfswe_counter
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PinCfg) refers to r_ioport.o(.text.R_IOPORT_PinCfg) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PinEventInputRead) refers to r_ioport.o(.text.R_IOPORT_PinEventInputRead) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PinEventOutputWrite) refers to r_ioport.o(.text.R_IOPORT_PinEventOutputWrite) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PinRead) refers to r_ioport.o(.text.R_IOPORT_PinRead) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PinWrite) refers to r_ioport.o(.text.R_IOPORT_PinWrite) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PortDirectionSet) refers to r_ioport.o(.text.R_IOPORT_PortDirectionSet) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PortEventInputRead) refers to r_ioport.o(.text.R_IOPORT_PortEventInputRead) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PortEventOutputWrite) refers to r_ioport.o(.text.R_IOPORT_PortEventOutputWrite) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PortRead) refers to r_ioport.o(.text.R_IOPORT_PortRead) for [Anonymous Symbol]
+    r_ioport.o(.ARM.exidx.text.R_IOPORT_PortWrite) refers to r_ioport.o(.text.R_IOPORT_PortWrite) for [Anonymous Symbol]
+    r_ioport.o(.text.r_ioport_pins_config) refers to r_ioport.o(.text.bsp_vbatt_init) for bsp_vbatt_init
+    r_ioport.o(.text.r_ioport_pins_config) refers to bsp_io.o(.bss.g_protect_pfswe_counter) for g_protect_pfswe_counter
+    r_ioport.o(.ARM.exidx.text.r_ioport_pins_config) refers to r_ioport.o(.text.r_ioport_pins_config) for [Anonymous Symbol]
+    r_ioport.o(.text.bsp_vbatt_init) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectDisable) for R_BSP_RegisterProtectDisable
+    r_ioport.o(.text.bsp_vbatt_init) refers to bsp_register_protection.o(.text.R_BSP_RegisterProtectEnable) for R_BSP_RegisterProtectEnable
+    r_ioport.o(.ARM.exidx.text.bsp_vbatt_init) refers to r_ioport.o(.text.bsp_vbatt_init) for [Anonymous Symbol]
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_Open) for R_IOPORT_Open
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_Close) for R_IOPORT_Close
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PinsCfg) for R_IOPORT_PinsCfg
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PinCfg) for R_IOPORT_PinCfg
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PinEventInputRead) for R_IOPORT_PinEventInputRead
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PinEventOutputWrite) for R_IOPORT_PinEventOutputWrite
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PinRead) for R_IOPORT_PinRead
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PinWrite) for R_IOPORT_PinWrite
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PortDirectionSet) for R_IOPORT_PortDirectionSet
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PortEventInputRead) for R_IOPORT_PortEventInputRead
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PortEventOutputWrite) for R_IOPORT_PortEventOutputWrite
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PortRead) for R_IOPORT_PortRead
+    r_ioport.o(.rodata.g_ioport_on_ioport) refers to r_ioport.o(.text.R_IOPORT_PortWrite) for R_IOPORT_PortWrite
+    r_sci_uart.o(.text.R_SCI_UART_Open) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Open) refers to r_sci_uart.o(.text.R_SCI_UART_Open) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Read) refers to r_sci_uart.o(.text.R_SCI_UART_Read) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Write) refers to r_sci_uart.o(.text.R_SCI_UART_Write) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_BaudSet) refers to r_sci_uart.o(.text.R_SCI_UART_BaudSet) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_InfoGet) refers to r_sci_uart.o(.text.R_SCI_UART_InfoGet) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Abort) refers to r_sci_uart.o(.text.R_SCI_UART_Abort) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_CallbackSet) refers to r_sci_uart.o(.text.R_SCI_UART_CallbackSet) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Close) refers to r_sci_uart.o(.text.R_SCI_UART_Close) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_ReadStop) refers to r_sci_uart.o(.text.R_SCI_UART_ReadStop) for [Anonymous Symbol]
+    r_sci_uart.o(.text.R_SCI_UART_BaudCalculate) refers to system.o(.bss.SystemCoreClock) for SystemCoreClock
+    r_sci_uart.o(.text.R_SCI_UART_BaudCalculate) refers to r_sci_uart.o(.rodata.g_async_baud) for g_async_baud
+    r_sci_uart.o(.text.R_SCI_UART_BaudCalculate) refers to r_sci_uart.o(.rodata.g_div_coefficient) for g_div_coefficient
+    r_sci_uart.o(.text.R_SCI_UART_BaudCalculate) refers to ldiv.o(.text) for __aeabi_ldivmod
+    r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_BaudCalculate) refers to r_sci_uart.o(.text.R_SCI_UART_BaudCalculate) for [Anonymous Symbol]
+    r_sci_uart.o(.text.sci_uart_txi_isr) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_sci_uart.o(.text.sci_uart_txi_isr) refers to r_sci_uart.o(.text.r_sci_uart_call_callback) for r_sci_uart_call_callback
+    r_sci_uart.o(.ARM.exidx.text.sci_uart_txi_isr) refers to r_sci_uart.o(.text.sci_uart_txi_isr) for [Anonymous Symbol]
+    r_sci_uart.o(.ARM.exidx.text.r_sci_uart_call_callback) refers to r_sci_uart.o(.text.r_sci_uart_call_callback) for [Anonymous Symbol]
+    r_sci_uart.o(.text.sci_uart_rxi_isr) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_sci_uart.o(.text.sci_uart_rxi_isr) refers to memcpya.o(.text) for __aeabi_memcpy
+    r_sci_uart.o(.text.sci_uart_rxi_isr) refers to r_sci_uart.o(.text.r_sci_uart_call_callback) for r_sci_uart_call_callback
+    r_sci_uart.o(.ARM.exidx.text.sci_uart_rxi_isr) refers to r_sci_uart.o(.text.sci_uart_rxi_isr) for [Anonymous Symbol]
+    r_sci_uart.o(.text.sci_uart_tei_isr) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_sci_uart.o(.text.sci_uart_tei_isr) refers to r_sci_uart.o(.text.r_sci_uart_call_callback) for r_sci_uart_call_callback
+    r_sci_uart.o(.ARM.exidx.text.sci_uart_tei_isr) refers to r_sci_uart.o(.text.sci_uart_tei_isr) for [Anonymous Symbol]
+    r_sci_uart.o(.text.sci_uart_eri_isr) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_sci_uart.o(.text.sci_uart_eri_isr) refers to r_sci_uart.o(.text.r_sci_uart_call_callback) for r_sci_uart_call_callback
+    r_sci_uart.o(.ARM.exidx.text.sci_uart_eri_isr) refers to r_sci_uart.o(.text.sci_uart_eri_isr) for [Anonymous Symbol]
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_Open) for R_SCI_UART_Open
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_Read) for R_SCI_UART_Read
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_Write) for R_SCI_UART_Write
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_BaudSet) for R_SCI_UART_BaudSet
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_InfoGet) for R_SCI_UART_InfoGet
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_Abort) for R_SCI_UART_Abort
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_CallbackSet) for R_SCI_UART_CallbackSet
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_Close) for R_SCI_UART_Close
+    r_sci_uart.o(.rodata.g_uart_on_sci) refers to r_sci_uart.o(.text.R_SCI_UART_ReadStop) for R_SCI_UART_ReadStop
+    common_data.o(.ARM.exidx.text.g_common_init) refers to common_data.o(.text.g_common_init) for [Anonymous Symbol]
+    common_data.o(.rodata.irq10_cfg) refers to fsp_icu_key.o(.text.key_external_irq) for key_external_irq
+    common_data.o(.rodata.irq10) refers to common_data.o(.bss.irq10_ctrl) for irq10_ctrl
+    common_data.o(.rodata.irq10) refers to common_data.o(.rodata.irq10_cfg) for irq10_cfg
+    common_data.o(.rodata.irq10) refers to r_icu.o(.rodata.g_external_irq_on_icu) for g_external_irq_on_icu
+    common_data.o(.rodata.irq9_cfg) refers to fsp_icu_key.o(.text.key_external_irq) for key_external_irq
+    common_data.o(.rodata.irq9) refers to common_data.o(.bss.irq9_ctrl) for irq9_ctrl
+    common_data.o(.rodata.irq9) refers to common_data.o(.rodata.irq9_cfg) for irq9_cfg
+    common_data.o(.rodata.irq9) refers to r_icu.o(.rodata.g_external_irq_on_icu) for g_external_irq_on_icu
+    common_data.o(.rodata.g_ioport) refers to common_data.o(.bss.g_ioport_ctrl) for g_ioport_ctrl
+    common_data.o(.rodata.g_ioport) refers to pin_data.o(.rodata.g_bsp_pin_cfg) for g_bsp_pin_cfg
+    common_data.o(.rodata.g_ioport) refers to r_ioport.o(.rodata.g_ioport_on_ioport) for g_ioport_on_ioport
+    hal_data.o(.text.g_hal_init) refers to common_data.o(.text.g_common_init) for g_common_init
+    hal_data.o(.ARM.exidx.text.g_hal_init) refers to hal_data.o(.text.g_hal_init) for [Anonymous Symbol]
+    hal_data.o(.rodata.g_transfer_dmac0_cfg) refers to hal_data.o(.data.g_transfer_dmac0_info) for g_transfer_dmac0_info
+    hal_data.o(.rodata.g_transfer_dmac0_cfg) refers to hal_data.o(.rodata.g_transfer_dmac0_extend) for g_transfer_dmac0_extend
+    hal_data.o(.rodata.g_transfer_dmac0) refers to hal_data.o(.bss.g_transfer_dmac0_ctrl) for g_transfer_dmac0_ctrl
+    hal_data.o(.rodata.g_transfer_dmac0) refers to hal_data.o(.rodata.g_transfer_dmac0_cfg) for g_transfer_dmac0_cfg
+    hal_data.o(.rodata.g_transfer_dmac0) refers to r_dmac.o(.rodata.g_transfer_on_dmac) for g_transfer_on_dmac
+    hal_data.o(.rodata.UART_4_cfg_extend) refers to hal_data.o(.data.UART_4_baud_setting) for UART_4_baud_setting
+    hal_data.o(.rodata.UART_4_cfg) refers to fsp_uart.o(.text.UART4_Int_Callback) for UART4_Int_Callback
+    hal_data.o(.rodata.UART_4_cfg) refers to hal_data.o(.rodata.UART_4_cfg_extend) for UART_4_cfg_extend
+    hal_data.o(.rodata.UART_4) refers to hal_data.o(.bss.UART_4_ctrl) for UART_4_ctrl
+    hal_data.o(.rodata.UART_4) refers to hal_data.o(.rodata.UART_4_cfg) for UART_4_cfg
+    hal_data.o(.rodata.UART_4) refers to r_sci_uart.o(.rodata.g_uart_on_sci) for g_uart_on_sci
+    main.o(.text.main) refers to hal_entry.o(.text.hal_entry) for hal_entry
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    pin_data.o(.rodata.g_bsp_pin_cfg) refers to pin_data.o(.rodata.g_bsp_pin_cfg_data) for g_bsp_pin_cfg_data
+    vector_data.o(.application_vectors) refers to r_icu.o(.text.r_icu_isr) for r_icu_isr
+    vector_data.o(.application_vectors) refers to r_sci_uart.o(.text.sci_uart_rxi_isr) for sci_uart_rxi_isr
+    vector_data.o(.application_vectors) refers to r_sci_uart.o(.text.sci_uart_txi_isr) for sci_uart_txi_isr
+    vector_data.o(.application_vectors) refers to r_sci_uart.o(.text.sci_uart_tei_isr) for sci_uart_tei_isr
+    vector_data.o(.application_vectors) refers to r_sci_uart.o(.text.sci_uart_eri_isr) for sci_uart_eri_isr
+    vector_data.o(.application_vectors) refers to r_dmac.o(.text.dmac_int_isr) for dmac_int_isr
+    r_dmac.o(.text.R_DMAC_Open) refers to r_dmac.o(.text.r_dmac_config_transfer_info) for r_dmac_config_transfer_info
+    r_dmac.o(.ARM.exidx.text.R_DMAC_Open) refers to r_dmac.o(.text.R_DMAC_Open) for [Anonymous Symbol]
+    r_dmac.o(.text.R_DMAC_Reconfigure) refers to r_dmac.o(.text.r_dmac_config_transfer_info) for r_dmac_config_transfer_info
+    r_dmac.o(.ARM.exidx.text.R_DMAC_Reconfigure) refers to r_dmac.o(.text.R_DMAC_Reconfigure) for [Anonymous Symbol]
+    r_dmac.o(.ARM.exidx.text.R_DMAC_Reset) refers to r_dmac.o(.text.R_DMAC_Reset) for [Anonymous Symbol]
+    r_dmac.o(.ARM.exidx.text.R_DMAC_Enable) refers to r_dmac.o(.text.R_DMAC_Enable) for [Anonymous Symbol]
+    r_dmac.o(.ARM.exidx.text.R_DMAC_Disable) refers to r_dmac.o(.text.R_DMAC_Disable) for [Anonymous Symbol]
+    r_dmac.o(.ARM.exidx.text.R_DMAC_SoftwareStart) refers to r_dmac.o(.text.R_DMAC_SoftwareStart) for [Anonymous Symbol]
+    r_dmac.o(.ARM.exidx.text.R_DMAC_SoftwareStop) refers to r_dmac.o(.text.R_DMAC_SoftwareStop) for [Anonymous Symbol]
+    r_dmac.o(.ARM.exidx.text.R_DMAC_InfoGet) refers to r_dmac.o(.text.R_DMAC_InfoGet) for [Anonymous Symbol]
+    r_dmac.o(.text.R_DMAC_Close) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_dmac.o(.ARM.exidx.text.R_DMAC_Close) refers to r_dmac.o(.text.R_DMAC_Close) for [Anonymous Symbol]
+    r_dmac.o(.text.r_dmac_config_transfer_info) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_dmac.o(.ARM.exidx.text.r_dmac_config_transfer_info) refers to r_dmac.o(.text.r_dmac_config_transfer_info) for [Anonymous Symbol]
+    r_dmac.o(.text.dmac_int_isr) refers to bsp_irq.o(.bss.gp_renesas_isr_context) for gp_renesas_isr_context
+    r_dmac.o(.ARM.exidx.text.dmac_int_isr) refers to r_dmac.o(.text.dmac_int_isr) for [Anonymous Symbol]
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_Open) for R_DMAC_Open
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_Reconfigure) for R_DMAC_Reconfigure
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_Reset) for R_DMAC_Reset
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_Enable) for R_DMAC_Enable
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_Disable) for R_DMAC_Disable
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_SoftwareStart) for R_DMAC_SoftwareStart
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_SoftwareStop) for R_DMAC_SoftwareStop
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_InfoGet) for R_DMAC_InfoGet
+    r_dmac.o(.rodata.g_transfer_on_dmac) refers to r_dmac.o(.text.R_DMAC_Close) for R_DMAC_Close
+    puts.o(i.puts) refers to fsp_uart.o(.text.fputc) for fputc
+    puts.o(i.puts) refers to stdout.o(.data) for __stdout
+    puts_e.o(.text) refers to fsp_uart.o(.text.fputc) for fputc
+    puts_e.o(.text) refers to stdout.o(.data) for __stdout
+    ldiv.o(.text) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to fsp_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to fsp_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to fsp_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to fsp_uart.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to fsp_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to fsp_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to fsp_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to fsp_uart.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to fsp_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to fsp_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to fsp_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to fsp_uart.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to fsp_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to fsp_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to fsp_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to fsp_uart.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to fsp_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to fsp_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to fsp_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to fsp_uart.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to fsp_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to fsp_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to fsp_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to fsp_uart.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to fsp_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to fsp_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to fsp_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to fsp_uart.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to fsp_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to fsp_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to fsp_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to fsp_uart.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to fsp_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to fsp_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to fsp_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to fsp_uart.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to fsp_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to fsp_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to fsp_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to fsp_uart.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to fsp_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to fsp_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to fsp_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to fsp_uart.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing fsp_led.o(.text), (0 bytes).
+    Removing fsp_led.o(.text.FSP_LED_Init), (22 bytes).
+    Removing fsp_led.o(.ARM.exidx.text.FSP_LED_Init), (8 bytes).
+    Removing fsp_button.o(.text), (0 bytes).
+    Removing fsp_button.o(.ARM.exidx.text.FSP_Button_Init), (8 bytes).
+    Removing fsp_button.o(.ARM.exidx.text.FSP_Scan_Key), (8 bytes).
+    Removing fsp_icu_key.o(.text), (0 bytes).
+    Removing fsp_icu_key.o(.text.Key_IRQ_Init), (108 bytes).
+    Removing fsp_icu_key.o(.ARM.exidx.text.Key_IRQ_Init), (8 bytes).
+    Removing fsp_icu_key.o(.text.key_external_irq), (36 bytes).
+    Removing fsp_icu_key.o(.ARM.exidx.text.key_external_irq), (8 bytes).
+    Removing fsp_icu_key.o(.bss.key1_sw2_press), (1 bytes).
+    Removing fsp_icu_key.o(.bss.key2_sw3_press), (1 bytes).
+    Removing fsp_systick.o(.text), (0 bytes).
+    Removing fsp_systick.o(.text.FSP_Systick_Init), (66 bytes).
+    Removing fsp_systick.o(.ARM.exidx.text.FSP_Systick_Init), (8 bytes).
+    Removing fsp_systick.o(.text.FSP_Delay_Systick), (48 bytes).
+    Removing fsp_systick.o(.ARM.exidx.text.FSP_Delay_Systick), (8 bytes).
+    Removing fsp_systick.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing fsp_systick.o(.bss.FSP_Systick_period), (4 bytes).
+    Removing fsp_uart.o(.text), (0 bytes).
+    Removing fsp_uart.o(.ARM.exidx.text.FSP_UART_Init), (8 bytes).
+    Removing fsp_uart.o(.ARM.exidx.text.UART4_Int_Callback), (8 bytes).
+    Removing fsp_uart.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing circular_queue.o(.text), (0 bytes).
+    Removing circular_queue.o(.ARM.exidx.text.Queue_Init), (8 bytes).
+    Removing circular_queue.o(.ARM.exidx.text.Queue_isEmpty), (8 bytes).
+    Removing circular_queue.o(.text.Queue_isFull), (42 bytes).
+    Removing circular_queue.o(.ARM.exidx.text.Queue_isFull), (8 bytes).
+    Removing circular_queue.o(.ARM.exidx.text.Queue_HadUse), (8 bytes).
+    Removing circular_queue.o(.text.Queue_NoUse), (52 bytes).
+    Removing circular_queue.o(.ARM.exidx.text.Queue_NoUse), (8 bytes).
+    Removing circular_queue.o(.ARM.exidx.text.Queue_Wirte), (8 bytes).
+    Removing circular_queue.o(.ARM.exidx.text.Queue_Read), (8 bytes).
+    Removing fsp_dmac.o(.text), (0 bytes).
+    Removing hal_entry.o(.text), (0 bytes).
+    Removing hal_entry.o(.ARM.exidx.text.hal_entry), (8 bytes).
+    Removing hal_entry.o(.ARM.exidx.text.R_BSP_WarmStart), (8 bytes).
+    Removing startup.o(.text), (0 bytes).
+    Removing startup.o(.ARM.exidx.text.Reset_Handler), (8 bytes).
+    Removing startup.o(.ARM.exidx.text.Default_Handler), (8 bytes).
+    Removing system.o(.text), (0 bytes).
+    Removing system.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system.o(.text.R_BSP_WarmStart), (2 bytes).
+    Removing system.o(.ARM.exidx.text.R_BSP_WarmStart), (8 bytes).
+    Removing bsp_clocks.o(.text), (0 bytes).
+    Removing bsp_clocks.o(.text.bsp_prv_operating_mode_set), (68 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.bsp_prv_operating_mode_set), (8 bytes).
+    Removing bsp_clocks.o(.text.bsp_prv_prepare_pll), (12 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.bsp_prv_prepare_pll), (8 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing bsp_clocks.o(.text.prv_clock_dividers_set), (12 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.prv_clock_dividers_set), (8 bytes).
+    Removing bsp_clocks.o(.text.bsp_prv_clock_set), (204 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.bsp_prv_clock_set), (8 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.bsp_clock_init), (8 bytes).
+    Removing bsp_clocks.o(.text.R_BSP_SubClockStabilizeWait), (8 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.R_BSP_SubClockStabilizeWait), (8 bytes).
+    Removing bsp_clocks.o(.text.R_BSP_OctaclkUpdate), (78 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.R_BSP_OctaclkUpdate), (8 bytes).
+    Removing bsp_clocks.o(.text.R_BSP_SourceClockHzGet), (14 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.R_BSP_SourceClockHzGet), (8 bytes).
+    Removing bsp_clocks.o(.ARM.exidx.text.R_BSP_Init_RTC), (8 bytes).
+    Removing bsp_common.o(.text), (0 bytes).
+    Removing bsp_common.o(.ARM.exidx.text.bsp_init_internal), (8 bytes).
+    Removing bsp_common.o(.text.R_FSP_VersionGet), (14 bytes).
+    Removing bsp_common.o(.ARM.exidx.text.R_FSP_VersionGet), (8 bytes).
+    Removing bsp_common.o(.ARM.exidx.text.__aeabi_assert), (8 bytes).
+    Removing bsp_delay.o(.text), (0 bytes).
+    Removing bsp_delay.o(.ARM.exidx.text.R_BSP_SoftwareDelay), (8 bytes).
+    Removing bsp_delay.o(.ARM.exidx.text.bsp_prv_software_delay_loop), (8 bytes).
+    Removing bsp_group_irq.o(.text), (0 bytes).
+    Removing bsp_group_irq.o(.text.R_BSP_GroupIrqWrite), (18 bytes).
+    Removing bsp_group_irq.o(.ARM.exidx.text.R_BSP_GroupIrqWrite), (8 bytes).
+    Removing bsp_group_irq.o(.ARM.exidx.text.NMI_Handler), (8 bytes).
+    Removing bsp_guard.o(.text), (0 bytes).
+    Removing bsp_io.o(.text), (0 bytes).
+    Removing bsp_irq.o(.text), (0 bytes).
+    Removing bsp_irq.o(.ARM.exidx.text.bsp_irq_cfg), (8 bytes).
+    Removing bsp_irq.o(.rodata.g_interrupt_event_link_select), (384 bytes).
+    Removing bsp_register_protection.o(.text), (0 bytes).
+    Removing bsp_register_protection.o(.ARM.exidx.text.R_BSP_RegisterProtectEnable), (8 bytes).
+    Removing bsp_register_protection.o(.ARM.exidx.text.R_BSP_RegisterProtectDisable), (8 bytes).
+    Removing bsp_rom_registers.o(.text), (0 bytes).
+    Removing bsp_sbrk.o(.text), (0 bytes).
+    Removing bsp_security.o(.text), (0 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_nonsecure_flash), (4 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_nonsecure_callable_flash), (4 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_secure_flash), (4 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_nonsecure_ram), (4 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_nonsecure_callable_ram), (4 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_secure_ram), (4 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_nonsecure_data_flash), (4 bytes).
+    Removing bsp_security.o(.rodata.gp_start_of_secure_data_flash), (4 bytes).
+    Removing r_icu.o(.text), (0 bytes).
+    Removing r_icu.o(.text.R_ICU_ExternalIrqOpen), (118 bytes).
+    Removing r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqOpen), (8 bytes).
+    Removing r_icu.o(.text.R_ICU_ExternalIrqEnable), (66 bytes).
+    Removing r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqEnable), (8 bytes).
+    Removing r_icu.o(.text.R_ICU_ExternalIrqDisable), (38 bytes).
+    Removing r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqDisable), (8 bytes).
+    Removing r_icu.o(.text.R_ICU_ExternalIrqCallbackSet), (10 bytes).
+    Removing r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqCallbackSet), (8 bytes).
+    Removing r_icu.o(.text.R_ICU_ExternalIrqClose), (64 bytes).
+    Removing r_icu.o(.ARM.exidx.text.R_ICU_ExternalIrqClose), (8 bytes).
+    Removing r_icu.o(.ARM.exidx.text.r_icu_isr), (8 bytes).
+    Removing r_icu.o(.rodata.g_external_irq_on_icu), (20 bytes).
+    Removing r_ioport.o(.text), (0 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_Open), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_Close), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PinsCfg), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PinCfg), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PinEventInputRead), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PinEventOutputWrite), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PinRead), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PinWrite), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PortDirectionSet), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PortEventInputRead), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PortEventOutputWrite), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PortRead), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.R_IOPORT_PortWrite), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.r_ioport_pins_config), (8 bytes).
+    Removing r_ioport.o(.ARM.exidx.text.bsp_vbatt_init), (8 bytes).
+    Removing r_sci_uart.o(.text), (0 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Open), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_Read), (10 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Read), (8 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Write), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_BaudSet), (80 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_BaudSet), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_InfoGet), (12 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_InfoGet), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_Abort), (34 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Abort), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_CallbackSet), (14 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_CallbackSet), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_Close), (166 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_Close), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_ReadStop), (14 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_ReadStop), (8 bytes).
+    Removing r_sci_uart.o(.text.R_SCI_UART_BaudCalculate), (392 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.R_SCI_UART_BaudCalculate), (8 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.sci_uart_txi_isr), (8 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.r_sci_uart_call_callback), (8 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.sci_uart_rxi_isr), (8 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.sci_uart_tei_isr), (8 bytes).
+    Removing r_sci_uart.o(.ARM.exidx.text.sci_uart_eri_isr), (8 bytes).
+    Removing r_sci_uart.o(.rodata.g_uart_on_sci), (36 bytes).
+    Removing r_sci_uart.o(.rodata.g_async_baud), (13 bytes).
+    Removing r_sci_uart.o(.rodata.g_div_coefficient), (26 bytes).
+    Removing common_data.o(.text), (0 bytes).
+    Removing common_data.o(.text.g_common_init), (2 bytes).
+    Removing common_data.o(.ARM.exidx.text.g_common_init), (8 bytes).
+    Removing common_data.o(.rodata.irq10_cfg), (32 bytes).
+    Removing common_data.o(.bss.irq10_ctrl), (20 bytes).
+    Removing common_data.o(.rodata.irq10), (12 bytes).
+    Removing common_data.o(.rodata.irq9_cfg), (32 bytes).
+    Removing common_data.o(.bss.irq9_ctrl), (20 bytes).
+    Removing common_data.o(.rodata.irq9), (12 bytes).
+    Removing hal_data.o(.text), (0 bytes).
+    Removing hal_data.o(.text.g_hal_init), (4 bytes).
+    Removing hal_data.o(.ARM.exidx.text.g_hal_init), (8 bytes).
+    Removing hal_data.o(.data.g_transfer_dmac0_info), (16 bytes).
+    Removing hal_data.o(.rodata.g_transfer_dmac0_extend), (32 bytes).
+    Removing hal_data.o(.rodata.g_transfer_dmac0_cfg), (8 bytes).
+    Removing hal_data.o(.bss.g_transfer_dmac0_ctrl), (12 bytes).
+    Removing hal_data.o(.rodata.g_transfer_dmac0), (12 bytes).
+    Removing hal_data.o(.rodata.UART_4), (12 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing pin_data.o(.text), (0 bytes).
+    Removing vector_data.o(.text), (0 bytes).
+    Removing r_dmac.o(.text), (0 bytes).
+    Removing r_dmac.o(.text.R_DMAC_Open), (84 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_Open), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_Reconfigure), (18 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_Reconfigure), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_Reset), (100 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_Reset), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_Enable), (10 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_Enable), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_Disable), (40 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_Disable), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_SoftwareStart), (12 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_SoftwareStart), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_SoftwareStop), (10 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_SoftwareStop), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_InfoGet), (44 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_InfoGet), (8 bytes).
+    Removing r_dmac.o(.text.R_DMAC_Close), (92 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.R_DMAC_Close), (8 bytes).
+    Removing r_dmac.o(.text.r_dmac_config_transfer_info), (406 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.r_dmac_config_transfer_info), (8 bytes).
+    Removing r_dmac.o(.ARM.exidx.text.dmac_int_isr), (8 bytes).
+    Removing r_dmac.o(.rodata.g_transfer_on_dmac), (36 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+
+202 unused section(s) (total 5239 bytes) removed from the image.
